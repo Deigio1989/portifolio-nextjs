@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDarkTheme;
+    const newTheme = isDarkTheme;
     setIsDarkTheme(newTheme);
     localStorage.setItem("theme", newTheme ? "dark" : "light");
 
