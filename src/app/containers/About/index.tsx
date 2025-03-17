@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 import { MailtoButton, Skills } from "./styles";
 import Avatar from "@/app/components/Avatar";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const descricao = `Sou um Desenvolvedor Full Stack formado pela EBAC – Escola Britânica de Artes Criativas e Tecnologia, de perfil criativo e de aprendizado rápido./n
 
