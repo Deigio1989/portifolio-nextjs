@@ -11,7 +11,7 @@ export default function Home() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   // Atualiza as variáveis CSS no :root com base no tema ativo
-  const updateCSSVariables = (theme) => {
+  const updateCSSVariables = (theme: { [key: string]: string }) => {
     const root = document.documentElement;
     Object.keys(theme).forEach((key) => {
       root.style.setProperty(`--${key}`, theme[key]);
