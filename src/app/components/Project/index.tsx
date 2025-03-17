@@ -25,13 +25,15 @@ const Project = ({ title, description, link, gitLink, icons }: Props) => (
         <Icon key={index}>{icon}</Icon>
       ))}
     </div>
-    <LinkButton href={link}>Visualizar</LinkButton>
-    <GitButton href={gitLink}>
-      <div className="flex gap-x-2 items-center">
-        <FaGithub />
-        Github
-      </div>
-    </GitButton>
+    <div className="flex items-center">
+      <LinkButton href={link}>Visualizar</LinkButton>
+      <GitButton href={gitLink}>
+        <div className="flex gap-x-2 items-center">
+          <FaGithub />
+          Github
+        </div>
+      </GitButton>
+    </div>
   </Card>
 );
 

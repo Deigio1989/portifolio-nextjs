@@ -5,7 +5,7 @@ export const Card = styled.div`
   padding: 16px 32px;
   border-radius: 8px;
   width: 100%;
-  height: 320px;
+  height: 360px;
   position: relative;
 `;
 export const LinkButton = styled.a`
@@ -15,22 +15,19 @@ export const LinkButton = styled.a`
   border: 2px solid ${(props) => props.theme.green};
   text-decoration: none;
   padding: 12px 16px;
-  display: inline-block;
+  margin-top: 24px;
+  margin-bottom: 32px;
   border-radius: 50px;
-  position: absolute; /* Agora é absoluto dentro do Card */
-  bottom: 32px; /* Sempre a 20px da parte inferior */
-  left: 10%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta a centralização */
   &:hover {
     background-color: ${(props) => props.theme.lightGreen};
     transition: background-color 0.2s ease-in;
   }
 `;
 export const GitButton = styled(LinkButton)`
+  margin-left: 16px;
   color: ${(props) => props.theme.color1};
   background-color: ${(props) => props.theme.background};
   border: 2px solid ${(props) => props.theme.green};
-  left: 27%;
 `;
 export const Icon = styled.div`
   font-size: 32px;

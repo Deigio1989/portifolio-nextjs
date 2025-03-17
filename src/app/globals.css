@@ -16,9 +16,11 @@
   --gradientLenght: 550px;
 }
 
-html {
+body {
   transform: scale(0.8);
+  transform-origin: top center;
 }
+
 .container {
   max-width: 1350px;
 }
