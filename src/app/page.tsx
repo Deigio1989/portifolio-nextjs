@@ -9,14 +9,6 @@ import Carousel from "./containers/Carousel";
 
 export default function Home() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-
-    const isDark = savedTheme ? savedTheme === "dark" : true;
-
-    setIsDarkTheme(isDark);
-    updateCSSVariables(isDark ? darkTheme : lightTheme);
-  }, []);
 
   const updateCSSVariables = (theme: { [key: string]: string }) => {
     const root = document.documentElement;
@@ -27,10 +19,10 @@ export default function Home() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const isDark = savedTheme === "dark";
-    setIsDarkTheme(isDark);
 
-    // Configurar variáveis CSS no carregamento inicial
+    const isDark = savedTheme ? savedTheme === "dark" : true;
+
+    setIsDarkTheme(isDark);
     updateCSSVariables(isDark ? darkTheme : lightTheme);
   }, []);
 
