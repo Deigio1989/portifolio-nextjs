@@ -8,7 +8,7 @@ import GlobalStyle from "./styles/GlobalStyle";
 import Carousel from "./containers/Carousel";
 
 export default function Home() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   // Atualiza as variáveis CSS no :root com base no tema ativo
   const updateCSSVariables = (theme: { [key: string]: string }) => {
@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = isDarkTheme;
+    const newTheme = !isDarkTheme;
     setIsDarkTheme(newTheme);
     localStorage.setItem("theme", newTheme ? "dark" : "light");
 
