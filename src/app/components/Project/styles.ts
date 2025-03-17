@@ -6,9 +6,12 @@ export const Card = styled.div`
   border-radius: 8px;
   width: 100%;
   height: 360px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 export const LinkButton = styled.a`
+  transform-origin: bottom;
   color: #fff;
   font-size: 18px;
   background-color: ${(props) => props.theme.green};

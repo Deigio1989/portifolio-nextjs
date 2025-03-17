@@ -18,12 +18,14 @@ type Props = {
 
 const Project = ({ title, description, link, gitLink, icons }: Props) => (
   <Card>
-    <Title fontSize={32}>{title}</Title>
-    <Paragraph fontSize={18}>{description}</Paragraph>
-    <div className="flex">
-      {icons.map((icon, index) => (
-        <Icon key={index}>{icon}</Icon>
-      ))}
+    <div>
+      <Title fontSize={32}>{title}</Title>
+      <Paragraph fontSize={18}>{description}</Paragraph>
+      <div className="flex">
+        {icons.map((icon, index) => (
+          <Icon key={index}>{icon}</Icon>
+        ))}
+      </div>
     </div>
     <div className="flex items-center">
       <LinkButton href={link}>Visualizar</LinkButton>
