@@ -4,7 +4,7 @@ export const Card = styled.div`
   border: 1px solid ${(props) => props.theme.borderColor};
   padding: 16px 32px;
   border-radius: 8px;
-  width: 740px;
+  width: 100%;
   height: 320px;
   position: relative;
 `;

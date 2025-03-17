@@ -19,7 +19,7 @@ const Carousel = () => {
         <Swiper
           modules={[Navigation, Pagination, EffectCoverflow]} // Adiciona módulos
           grabCursor={true} // Cursor de clique
-          spaceBetween={10} // Espaço entre os slides
+          spaceBetween={30} // Espaço entre os slides
           initialSlide={1}
           slidesPerView={3} // Número de slides visíveis
           pagination={{ clickable: true }} // Adiciona paginação clicável
