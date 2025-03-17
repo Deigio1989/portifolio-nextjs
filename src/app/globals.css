@@ -16,7 +16,7 @@
   --gradientLenght: 550px;
 }
 
-body {
+html {
   transform: scale(0.8);
   transform-origin: top center;
 }
