@@ -15,6 +15,10 @@
   --lightGreen: #2ecc71; /* Substituído dinamicamente */
   --gradientLenght: 550px;
 }
+
+html {
+  transform: scale(0.8);
+}
 .container {
   max-width: 1350px;
 }
