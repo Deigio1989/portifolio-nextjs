@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+:root {
+  --background: #ffffff; /* Substituído dinamicamente */
+  --foreground: #161818; /* Substituído dinamicamente */
+  --color1: #161818; /* Substituído dinamicamente */
+  --color2: #6b6b6b; /* Substituído dinamicamente */
+  --green: #27ae60; /* Substituído dinamicamente */
+  --lightGreen: #2ecc71; /* Substituído dinamicamente */
+  --gradientLenght: 550px;
+}
+.container {
+  max-width: 1350px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.swiper {
+  width: 98%;
+}
+.swiper-slide {
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms linear;
+  transform: scale(0.9);
+}
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.swiper-slide-next {
+  transform: scale(1);
+  transition: scale 0.3s ease;
+}
+.swiper-slide-next::after {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.left-gradient,
+.right-gradient {
+  position: relative;
+}
+
+.left-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--gradientLenght);
+  height: 100%;
+  background: linear-gradient(to right, var(--background), rgba(0, 0, 0, 0));
+  z-index: 1;
+  pointer-events: none;
+}
+.right-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--gradientLenght);
+  height: 100%;
+  background: linear-gradient(to left, var(--background), rgba(0, 0, 0, 0));
+  z-index: 1;
+  pointer-events: none;
+}
