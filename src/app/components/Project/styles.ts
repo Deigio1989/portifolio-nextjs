@@ -11,6 +11,7 @@ export const Card = styled.div`
   justify-content: space-between;
   @media (max-width: 768px) {
     height: 100%;
+    scale: 0.8;
   }
 `;
 export const LinkButton = styled.a`

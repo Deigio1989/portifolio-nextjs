@@ -48,6 +48,7 @@ const Carousel = () => {
           initialSlide={1} // Slide inicial
           slidesPerView={slidesPerView} // Número de slides visíveis
           pagination={{ clickable: true }} // Adiciona paginação clicável
+          navigation
         >
           {typeof window !== "undefined" && window.innerWidth > 764 ? (
             <SwiperSlide>
@@ -58,7 +59,7 @@ const Carousel = () => {
           )}
 
           {projects.map((project, index) => (
-            <SwiperSlide style={{ opacity: 1 }} key={index}>
+            <SwiperSlide key={index}>
               <Project
                 key={index}
                 title={project.title}
