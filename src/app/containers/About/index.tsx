@@ -13,8 +13,8 @@ Atualmente, estou me especializando em React, Redux e Django REST Framework, foc
 `;
 const skills = `Python, C# /nHTML, CSS, JavaScript, TypeScript /nReact, Redux, NextJS /nDjango REST Framework /nSQL, Postgres /nDocker, Cypress, Jest, Pytest /nStyled Components, Tailwind /nGit, GitHub`;
 const About = () => (
-  <div className="container mx-auto  flex py-10 ">
-    <section className=" w-4/12 flex flex-col ">
+  <div className="container mx-auto flex flex-col md:flex-row py-10">
+    <section className=" w-4/12 flex flex-col items-center md:items-start mx-auto ">
       <Avatar />
       <h1 className="text-4xl font-bold mb-4">
         <Typewriter
@@ -53,13 +53,15 @@ const About = () => (
         </a>
       </motion.div>
     </section>
-    <section className="ml-2 w-5/12">
+    <section className="w-auto mx-2 mt-7 md:mt-0 md:ml-2 md:mr-0  md:w-5/12">
       <MultilineText text={descricao} size={20} />
-      <MailtoButton href="diegosmsaintmartin@gmail.com" title="Enviar email">
-        Entre em contato
-      </MailtoButton>
+      <div className="flex justify-end md:justify-start">
+        <MailtoButton href="diegosmsaintmartin@gmail.com" title="Enviar email">
+          Entre em contato
+        </MailtoButton>
+      </div>
     </section>
-    <section className="ml-10 w-3/12">
+    <section className="w-auto md:w-3/12 mt-7 md:mt-0 md:ml-10 ">
       <Skills>
         <h2 className="text-2xl mb-4 ">TECH STACK</h2>
         <MultilineText text={skills} size={18} />
