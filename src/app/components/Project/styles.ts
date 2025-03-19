@@ -9,6 +9,9 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 export const LinkButton = styled.a`
   transform-origin: bottom;

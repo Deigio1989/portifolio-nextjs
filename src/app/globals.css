@@ -65,6 +65,7 @@ h6 {
 .left-gradient,
 .right-gradient {
   position: relative;
+  width: 100%;
 }
 
 .left-gradient::after {
@@ -88,4 +89,18 @@ h6 {
   background: linear-gradient(to left, var(--background), rgba(0, 0, 0, 0));
   z-index: 1;
   pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .left-gradient::after,
+  .right-gradient::after {
+    display: none;
+  }
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-slide::after {
+    opacity: 0;
+  }
 }

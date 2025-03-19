@@ -5,6 +5,9 @@ export const Image = styled.img`
   border-radius: 50%;
   margin-bottom: 24px;
   @media (max-width: 768px) {
-    width: 140px;
+    width: 240px;
+    max-width: none;
+    margin-bottom: 32px;
+    justify-self: center;
   }
 `;

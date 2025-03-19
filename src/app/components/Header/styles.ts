@@ -6,6 +6,10 @@ export const HeaderWrapper = styled.header`
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(61, 60, 60, 0.3);
+  transform: scale(1.25);
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -14,11 +18,18 @@ export const HeaderContent = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1350px;
+  transform: scale(0.8);
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const ThemeSwitch = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SwitchLabel = styled.label`
