@@ -13,22 +13,26 @@ import { projects } from "./projects";
 import { BlankProject } from "./styles";
 
 const Carousel = () => {
-  const [slidesPerView, setSlidesPerView] = useState(getInitialSlideNumber());
+  const [slidesPerView, setSlidesPerView] = useState(1); // Valor padrão para evitar erros em SSR
 
   // Função para calcular o número inicial de slides
-  function getInitialSlideNumber() {
-    return window.innerWidth > 764 ? 3 : 1;
-  }
-
-  // Atualiza o número de slides dinamicamente ao redimensionar a janela
   useEffect(() => {
+    // Executa apenas no navegador
+    if (typeof window === "undefined") return;
+
+    const getInitialSlideNumber = () => {
+      return window.innerWidth > 764 ? 3 : 1;
+    };
+
     const handleResize = () => {
       setSlidesPerView(window.innerWidth > 764 ? 3 : 1);
     };
 
+    // Ajusta os slides com base na largura da janela
+    setSlidesPerView(getInitialSlideNumber());
     window.addEventListener("resize", handleResize);
 
-    // Remove o listener ao desmontar o componente
+    // Remove o evento ao desmontar o componente
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -41,11 +45,11 @@ const Carousel = () => {
           modules={[Navigation, Pagination, EffectCoverflow]} // Adiciona módulos
           grabCursor={true} // Cursor de clique
           spaceBetween={30} // Espaço entre os slides
-          initialSlide={1}
+          initialSlide={1} // Slide inicial
           slidesPerView={slidesPerView} // Número de slides visíveis
           pagination={{ clickable: true }} // Adiciona paginação clicável
         >
-          {window.innerWidth > 764 ? (
+          {typeof window !== "undefined" && window.innerWidth > 764 ? (
             <SwiperSlide>
               <BlankProject />
             </SwiperSlide>
@@ -65,7 +69,8 @@ const Carousel = () => {
               />
             </SwiperSlide>
           ))}
-          {window.innerWidth > 764 ? (
+
+          {typeof window !== "undefined" && window.innerWidth > 764 ? (
             <SwiperSlide>
               <BlankProject />
             </SwiperSlide>
