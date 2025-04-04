@@ -112,5 +112,13 @@ h6 {
   .swiper-button-next,
   .swiper-button-prev {
     opacity: 1;
+    color: var(--green) !important;
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color2) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--green) !important;
 }

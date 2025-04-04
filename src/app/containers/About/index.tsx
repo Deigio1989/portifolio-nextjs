@@ -56,7 +56,10 @@ const About = () => (
     <section className="w-auto mx-2 mt-7 md:mt-0 md:ml-2 md:mr-0  md:w-5/12">
       <MultilineText text={descricao} size={20} />
       <div className="flex justify-end md:justify-start">
-        <MailtoButton href="diegosmsaintmartin@gmail.com" title="Enviar email">
+        <MailtoButton
+          href="mailto:diegosmsaintmartin@gmail.com"
+          title="Enviar email"
+        >
           Entre em contato
         </MailtoButton>
       </div>

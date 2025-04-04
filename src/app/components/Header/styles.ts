@@ -48,7 +48,7 @@ export const SwitchInput = styled.input`
     background-color: ${(props) => props.theme.green};
   }
   &:hover + span {
-    background-color: ${(props) => props.theme.lightGreen};
+    background-color: ${(props) => props.theme.switchBackground};
   }
   &:checked + span:before {
     transform: translateX(26px);

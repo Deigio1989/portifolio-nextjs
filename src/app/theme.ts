@@ -6,6 +6,7 @@ export const darkTheme = {
   color2: "#aaaaaa", // Secundário (cinza claro)
   green: "#27ae60",
   lightGreen: "#2ecc71",
+  switchBackground: "#2ecc71",
 };
 
 export const lightTheme = {
@@ -15,4 +16,5 @@ export const lightTheme = {
   color2: "#6b6b6b", // Secundário (cinza escuro)
   green: "#27ae60",
   lightGreen: "#2ecc71",
+  switchBackground: "#aaaaaa",
 };
