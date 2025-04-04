@@ -9,9 +9,9 @@ const descricao = `Sou um Desenvolvedor Full Stack formado pela EBAC – Escola 
 
 Minha trajetória no Design Gráfico e Ilustração enriqueceu minha capacidade de desenvolver layouts front-end em frameworks variados, com uma forte ênfase na estética e funcionalidade./n
 
-Atualmente, estou me especializando em React, Redux e Django REST Framework, focando na criação de APIs REST robustas e escaláveis. Estou sempre buscando novas oportunidades para aplicar meu conhecimento em projetos desafiadores./n
+Atualmente, estou me especializando em React, Redux, Django REST Framework e ASP.NET focando na criação de APIs REST robustas e escaláveis. Estou sempre buscando novas oportunidades para aplicar meu conhecimento em projetos desafiadores./n
 `;
-const skills = `Python, C# /nHTML, CSS, JavaScript, TypeScript /nReact, Redux, NextJS /nDjango REST Framework /nSQL, Postgres /nDocker, Cypress, Jest, Pytest /nStyled Components, Tailwind /nGit, GitHub`;
+const skills = `Python, C# /nHTML, CSS, JavaScript, TypeScript /nReact, Redux, NextJS /nDjango REST Framework, Entity Framework/nSQL, Postgres /nDocker, Cypress, Jest, Pytest, xUnit /nStyled Components, Tailwind /nGit, GitHub`;
 const About = () => (
   <div className="container mx-auto flex flex-col md:flex-row py-10">
     <section className=" w-4/12 flex flex-col items-center md:items-start mx-auto ">
