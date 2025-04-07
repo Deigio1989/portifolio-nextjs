@@ -32,7 +32,7 @@ export const projects = [
     description:
       "Desenvolvimento de aplicação fullstack clone do Twitter.Utilização do Django Rest Framework e Postgres para o Backend e NextJS para o Frontend.",
     link: "https://twitter-clone-gamma-virid.vercel.app/",
-    gitLink: "https://github.com/Deigio1989/Efood",
+    gitLink: "https://github.com/Deigio1989/portifolio-nextjs",
     icons: [
       <SiReact key="React" title="React" />,
       <SiDjango key="Django" title="Django" />,
